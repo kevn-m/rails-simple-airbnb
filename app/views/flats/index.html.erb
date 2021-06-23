@@ -1,8 +1,9 @@
 <h1 class="text-center">All our flats: (<%= Flat.count %>)</h1>
 
 <div class="container d-flex justify-content-center mb-3">
-  <button type="button" class="btn btn-dark">Add flat</button>
+  <%= link_to "Add flat", new_flat_path, :class => "btn btn-dark"  %>
 </div>
+
 
 <div class="main cards d-flex justify-content-around">
   <% @flats.each do |flat| %>
@@ -18,7 +19,8 @@
             <i class="fas fa-dollar-sign"> <%= flat.price_per_night %></i>
             <i class="fas fa-user-friends"> <%= flat.number_of_guests %> </i>
           </div>
-          <button type="button" class="btn btn-dark mt-3">More info</button>
+          <!-- <button type="button" class="btn btn-dark mt-3">More info</button> -->
+          <%= link_to "More info", flat_path(flat), class: "btn btn-dark mt-3" %>
         </div>
       </div>
     </div>
