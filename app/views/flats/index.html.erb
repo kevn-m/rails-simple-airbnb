@@ -4,8 +4,10 @@
   <% @flats.each do |flat| %>
     <div class="card" style="width: 18rem;">
       <div class="card-body d-flex flex-column justify-content-around">
-        <h5 class="card-title"> <%= flat.name %></h5>
-        <h6 class="card-subtitle mb-2 text-muted"> <%= flat.address %> </h6>
+        <div class="title">
+          <h5 class="card-title"> <%= flat.name %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"> <%= flat.address %> </h6>
+        </div>
         <p class="card-text"><%= flat.description %></p>
         <div class="info-box d-flex flex-column text-center">
           <div class="info-details d-flex justify-content-between">
