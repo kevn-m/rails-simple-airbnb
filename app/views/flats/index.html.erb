@@ -1,6 +1,15 @@
-<h1>All our flats: (<%= Flat.count %>)</h1>
-<ul>
+<h1 class="text-center">All our flats: (<%= Flat.count %>)</h1>
+
+<div class="main cards d-flex justify-content-around">
   <% @flats.each do |flat| %>
-    <li><%= flat.name %></li>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"> <%= flat.name %></h5>
+        <h6 class="card-subtitle mb-2 text-muted"> <%= flat.address %> </h6>
+        <p class="card-text"><%= flat.description %></p>
+        <i class="fas fa-dollar-sign"> <%= flat.price_per_night %></i>
+        <i class="fas fa-user-friends"> <%= flat.number_of_guests %> </i>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
