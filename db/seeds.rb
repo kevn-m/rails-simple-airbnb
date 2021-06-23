@@ -13,7 +13,7 @@ Flat.all.destroy_all
 puts 'Creating flats'
 4.times do
   Flat.create!(
-    name: "#{Faker::Emotion.adjective} flat",
+    name: "#{Faker::Games::WorldOfWarcraft.hero} flat",
     address: Faker::Address.street_address,
     description: Faker::Quote.yoda,
     price_per_night: rand(50..500),
