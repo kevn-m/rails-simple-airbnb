@@ -1,1 +1,6 @@
 <h1>All our flats: (<%= Flat.count %>)</h1>
+<ul>
+  <% @flats.each do |flat| %>
+    <li><%= flat.name %></li>
+  <% end %>
+</ul>
